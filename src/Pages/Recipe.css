@@ -1,0 +1,11 @@
+.recipeDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 2vw;
+}
+
+.recipeSummary {
+  margin: 2vh 2vw;
+}

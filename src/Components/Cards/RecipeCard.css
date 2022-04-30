@@ -1,0 +1,33 @@
+.cardBoxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border: #00000040 solid 1px;
+  border-radius: 20px;
+  width: 26.5rem;
+  margin: 4rem;
+  box-shadow: 0px 4px 4px #00000040, 10px 8px 19px 4px #00000040;
+  color: black;
+  cursor: pointer;
+}
+
+.cardBoxContainer:hover {
+  background-color: #d1d1d1;
+  width: 27.5rem;
+  margin: 3.5rem;
+}
+
+.cardBoxContainer img {
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 20px;
+}
+
+.cardBoxContainer h3 {
+  max-width: 26.5rem;
+  color: black;
+  font-size: calc(0.8rem + 0.8vw);
+  margin: 0.5rem;
+}

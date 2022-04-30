@@ -1,0 +1,27 @@
+.searchBarContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 10vw;
+}
+
+.searchBarContainer input {
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  color: #4d7a82;
+  font-weight: bold;
+  outline-width: 0;
+  padding: 1vh 1vw;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #d1d1d1;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #d1d1d1;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #d1d1d1;
+  }

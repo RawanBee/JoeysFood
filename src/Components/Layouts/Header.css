@@ -1,0 +1,18 @@
+.mainHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainHeaderContainer img {
+  max-width: 8vw;
+  margin: 1vh 0vw;
+}
+
+.mainHeaderContainer hr {
+  width: 100%;
+  color: #e0e0e0;
+  background-color: #e0e0e0;
+  border: solid 1px #e0e0e0;
+}
