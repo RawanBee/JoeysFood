@@ -1,11 +1,30 @@
 .recipeDetailsContainer {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2vh 2vw;
+  max-width: 100%;
+}
+
+.recipeBasicInfoContainer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.recipeDetailsContainer h3 {
   margin: 2vh 2vw;
 }
 
+.recipeBasicInfoContainer img {
+  margin: 2vh 2vw;
+  max-width: 30vw;
+}
+
 .recipeSummary {
+  display: flex;
+  flex-direction: column;
   margin: 2vh 2vw;
 }

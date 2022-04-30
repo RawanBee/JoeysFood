@@ -1,0 +1,11 @@
+.noResultsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 2vw;
+}
+
+.noResultsContainer h3 {
+    font-size: calc(0.8rem + 0.8vw);
+}

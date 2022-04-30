@@ -6,6 +6,7 @@ import RecipeCard from "../Cards/RecipeCard";
 import RecipesCard from "../Cards/RecipesCard";
 import { useNavigate } from "react-router-dom";
 import RecipesList from "./RecipesList";
+import NotFound from "../Layouts/NotFound";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
@@ -41,6 +42,8 @@ const SearchBar = () => {
       />
       {results.length ? (
         <RecipesCard>{mapping()}</RecipesCard>
+      ) : results.length === 0 && query.length > 0 ? (
+        <NotFound />
       ) : (
         <RecipesList />
       )}

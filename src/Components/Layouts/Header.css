@@ -1,4 +1,8 @@
 .mainHeaderContainer {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +12,7 @@
 .mainHeaderContainer img {
   max-width: 8vw;
   margin: 1vh 0vw;
+  cursor: pointer;
 }
 
 .mainHeaderContainer hr {

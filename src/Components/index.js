@@ -3,4 +3,14 @@ import SearchBar from "./Sections/SearchBar";
 import RecipesList from "./Sections/RecipesList";
 import RecipeCard from "./Cards/RecipeCard";
 import RecipesCard from "./Cards/RecipesCard";
-export { Header, SearchBar, RecipesList, RecipeCard, RecipesCard };
+import NotFound from "./Layouts/NotFound";
+import ScrollToTop from "./Layouts/ScrollToTop";
+export {
+  Header,
+  SearchBar,
+  RecipesList,
+  RecipeCard,
+  RecipesCard,
+  NotFound,
+  ScrollToTop,
+};
