@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { searchRecipes } from "../../Services";
-// import debounce from "lodash.debounce";
 import "./SearchBar.css";
 import RecipeCard from "../Cards/RecipeCard";
 import RecipesCard from "../Cards/RecipesCard";
@@ -14,7 +13,6 @@ const SearchBar = () => {
   const navigate = useNavigate();
 
   const changeHandler = async (event) => {
-    console.log(event.target.value);
     setQuery(event.target.value);
     const data = await searchRecipes(event.target.value);
     setResults(data);

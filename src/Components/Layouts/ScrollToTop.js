@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./ScrollToTop.css";
 
 const ScrollToTop = () => {
-
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
@@ -21,11 +20,11 @@ const ScrollToTop = () => {
       behavior: "smooth",
     });
   };
-  
+
   return (
     <div className="top-to-btm">
       {showTopBtn && (
-        <button className="icon-position icon-style" onClick={goToTop}/>
+        <button className="icon-position icon-style" onClick={goToTop}>UP</button>
       )}
     </div>
   );

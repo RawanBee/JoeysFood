@@ -3,12 +3,16 @@ const base_Url = process.env.REACT_APP_BASE_URL;
 const apiKey = process.env.REACT_APP_API_KEY;
 
 export const getRecipes = () => {
-  return axios(`${base_Url}/complexSearch?number=75&apiKey=${apiKey}&number=15`, {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  })
+  //error handled
+  return axios(
+    `${base_Url}/complexSearch?number=75&apiKey=${apiKey}&number=15`,
+    {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    }
+  )
     .then((data) => {
       return data?.data?.results || [];
     })
@@ -33,17 +37,21 @@ export const getRecipeById = (id) => {
     });
 };
 
-export const searchRecipes =(query)=> {
-    return axios(`${base_Url}/complexSearch?apiKey=${apiKey}&query=${query}&number=15`, {
+export const searchRecipes = (query) => {
+  return axios(
+    `${base_Url}/complexSearch?apiKey=${apiKey}&query=${query}&number=15`,
+    {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
+    }
+  )
+    .then((data) => {
+      return data?.data?.results || [];
     })
-      .then((data) => {
-        return data?.data?.results || [];
-      })
-      .catch((err) => {
-        return err;
-      });
-  };
+    .catch((err) => {
+      console.log(err, "hiiii");
+      return err;
+    });
+};

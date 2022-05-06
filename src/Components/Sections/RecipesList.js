@@ -2,16 +2,24 @@ import { getRecipes } from "../../Services";
 import { useEffect, useState } from "react";
 import RecipeCard from "../Cards/RecipeCard";
 import RecipesCard from "../Cards/RecipesCard";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+// import Error from "../Layouts/Error";
 
 const RecipesList = () => {
   const navigate = useNavigate();
 
   const [random, setRandom] = useState([]);
+  // const [error, setError] = useState(false);
+  // const [errorMsg, setErrorMsg] = useState(false);
 
   const fetchData = async () => {
     const data = await getRecipes();
-    setRandom(data);
+    // if (data?.message) {
+    //   setError(true);
+    //   setErrorMsg(data?.message);
+    // } else {
+      setRandom(data);
+    // }
   };
 
   useEffect(() => {
@@ -32,7 +40,15 @@ const RecipesList = () => {
     });
   };
 
-  return <RecipesCard>{mapping()}</RecipesCard>;
+  return (
+    // <>
+    //   {error ? (
+    //     <Error msg={errorMsg} />
+    //   ) : (
+        <RecipesCard>{mapping()}</RecipesCard>
+    //   )}
+    // </>
+  );
 };
 
 export default RecipesList;
