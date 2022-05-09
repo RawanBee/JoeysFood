@@ -6,12 +6,11 @@ Your favorite site for recipes! Joey is only sharing food here.
 #### How to run this app locally 
 
 1.`$ npm install`  
-2.`$ npm start` 
-3.`$ in the main directory create .env file that includes:`
-  1. REACT_APP_BASE_URL=https://api.spoonacular.com/recipes
-  2. REACT_APP_API_KEY= YOUR_API_KEY
-4.`$ npm start`   
-5.`$ npm run cy`   
+2.`in the main directory create .env file that includes:`  
+  - REACT_APP_BASE_URL=https://api.spoonacular.com/recipes
+  - REACT_APP_API_KEY= YOUR_API_KEY
+3.`$ npm start`   
+4.`$ npm run cy`   
 
 
 #### Design decisions
