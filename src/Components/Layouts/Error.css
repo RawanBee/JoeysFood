@@ -5,6 +5,7 @@
   align-self: center;
   margin-top: 2vh;
   height: 10%;
+  width: fit-content;
   background-color: #bc2022;
   border-radius: 3%;
 }

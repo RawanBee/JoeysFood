@@ -3,7 +3,6 @@ const base_Url = process.env.REACT_APP_BASE_URL;
 const apiKey = process.env.REACT_APP_API_KEY;
 
 export const getRecipes = () => {
-  //error handled
   return axios(
     `${base_Url}/complexSearch?number=75&apiKey=${apiKey}&number=15`,
     {
@@ -51,7 +50,6 @@ export const searchRecipes = (query) => {
       return data?.data?.results || [];
     })
     .catch((err) => {
-      console.log(err, "hiiii");
       return err;
     });
 };

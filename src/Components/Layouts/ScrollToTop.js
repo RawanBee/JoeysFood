@@ -6,11 +6,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
+      window.scrollY > 300 ? setShowTopBtn(true) : setShowTopBtn(false);
     });
   }, []);
 
@@ -24,7 +20,9 @@ const ScrollToTop = () => {
   return (
     <div className="top-to-btm">
       {showTopBtn && (
-        <button className="icon-position icon-style" onClick={goToTop}>UP</button>
+        <button className="icon-position icon-style" onClick={goToTop}>
+          UP
+        </button>
       )}
     </div>
   );

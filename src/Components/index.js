@@ -6,6 +6,8 @@ import RecipesCard from "./Cards/RecipesCard";
 import NotFound from "./Layouts/NotFound";
 import ScrollToTop from "./Layouts/ScrollToTop";
 import Error from "./Layouts/Error";
+import Loading from "./Layouts/Loading";
+import RecipeInfo from "./Sections/RecipeInfo";
 export {
   Header,
   SearchBar,
@@ -15,4 +17,6 @@ export {
   NotFound,
   ScrollToTop,
   Error,
+  Loading,
+  RecipeInfo,
 };

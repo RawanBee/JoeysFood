@@ -7,15 +7,15 @@
   max-width: 100%;
 }
 
+.recipeDetailsContainer h3 {
+  margin: 2vh 2vw;
+}
+
 .recipeBasicInfoContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.recipeDetailsContainer h3 {
-  margin: 2vh 2vw;
 }
 
 .recipeBasicInfoContainer img {

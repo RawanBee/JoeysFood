@@ -1,10 +1,11 @@
-import { Header, SearchBar } from "./Components";
+import { Header } from "./Components";
+import { Main } from "./Pages";
 
 const App = () => {
   return (
     <>
       <Header />
-      <SearchBar />
+      <Main />
     </>
   );
 };

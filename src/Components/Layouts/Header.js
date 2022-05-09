@@ -4,18 +4,18 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
   const navigate = useNavigate();
 
-  const clickHandler = (id) => {
+  const clickHandler = () => {
     navigate(`/`);
   };
   return (
-    <div className="mainHeaderContainer">
+    <header className="mainHeaderContainer">
       <img
         src={process.env.PUBLIC_URL + "/assets/recipesLogo.png"}
         alt="Joey's Food Logo"
         onClick={clickHandler}
       />
         <hr />
-    </div>
+    </header>
   );
 };
 
