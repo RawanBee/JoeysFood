@@ -26,3 +26,9 @@ Your favorite site for recipes! Joey is only sharing food here.
 2. Poor details page design
 3. Lack of pagination OR load more feature for the list of items
 4. Accessability
+
+
+#### Lessons learned 
+
+- It is been a while since I last used ReactJS without a state management library, considering the components tree and avoiding props drilling were fun to deal with.
+
