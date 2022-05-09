@@ -1,6 +1,6 @@
 # Joey's Food 
 
-Your favorite site for recipes! Joey is only sharing food here.
+Your favorite site for recipes! Joey is only sharing food here https://joeys-food.netlify.app/
 
 
 #### How to run this app locally 
