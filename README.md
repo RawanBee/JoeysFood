@@ -10,6 +10,7 @@ Your favorite site for recipes! Joey is only sharing food here https://joeys-foo
   - REACT_APP_API_KEY= YOUR_API_KEY  
 1.`$ npm install`  
 2.`$ npm start`   
+- `to run the tests:`   
 3.`$ npm run cy`   
 
 
