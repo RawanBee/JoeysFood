@@ -9,6 +9,7 @@ const RecipeCard = ({ recipe }) => {
           "https://artsmidnorthcoast.com/wp-content/uploads/2014/05/no-image-available-icon-6.png"
         }
         alt="Recipe's Result"
+        loading="lazy"
       />
       <h3>{recipe?.title}</h3>
     </div>
