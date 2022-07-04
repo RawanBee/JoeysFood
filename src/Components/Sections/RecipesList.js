@@ -6,7 +6,7 @@ const RecipesList = ({ mappingRandom }) => {
 };
 
 RecipesList.propTypes = {
-  mappingRandom: PropTypes.func,
+  mappingRandom: PropTypes.array,
 };
 
 export default RecipesList;
