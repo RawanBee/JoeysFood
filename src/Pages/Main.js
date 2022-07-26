@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { searchRecipes, getRecipes } from "../Services";
 import {
   RecipesCard,
@@ -9,7 +9,16 @@ import {
   RecipesList,
 } from "../Components";
 import { useNavigate } from "react-router-dom";
+import { debounce } from "lodash";
 import "./Main.css";
+
+/*
+Lodash is very useful when I handle nested array or objects. 
+By using functions supported by Lodash, you can chain the Lodash 
+functions so you can perform complicated array or objects 
+manipulations easily. This can lead your code to have more modularity 
+with less code when you need to deal with a complex data structure.
+*/
 
 const Main = () => {
   const [query, setQuery] = useState("");
@@ -34,10 +43,18 @@ const Main = () => {
     fetchData();
   }, [error]);
 
-  const changeHandler = async (event) => {
+  const debouncedOnChange = useMemo(
+    () =>
+      debounce(async (q) => {
+        const data = await searchRecipes(q);
+        setResults(data);
+      }, 500),
+    []
+  );
+
+  const changeHandler = (event) => {
     setQuery(event.target.value);
-    const data = await searchRecipes(event.target.value);
-    setResults(data);
+    debouncedOnChange(event.target.value);
   };
 
   const clickHandler = (id) => {
@@ -77,9 +94,9 @@ const Main = () => {
       <SearchBar changeHandler={changeHandler} query={query} />
       {error ? <Error msg={errorMsg} /> : <></>}
 
-      {results.length ? (
+      {results?.length ? (
         <RecipesCard>{mappingSearchResults()}</RecipesCard>
-      ) : results.length === 0 && query.length > 0 ? (
+      ) : results?.length === 0 && query?.length > 0 ? (
         <NotFound />
       ) : (
         <RecipesList mappingRandom={mappingRandom()} />
