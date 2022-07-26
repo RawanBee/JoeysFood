@@ -2,6 +2,7 @@ import { getRecipeById } from "../Services";
 import { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { Header, RecipesCard, Loading, RecipeInfo } from "../Components";
+import DOMPurify from 'dompurify';
 
 const Recipe = () => {
   const [recipe, setRecipe] = useState({});
@@ -20,7 +21,10 @@ const Recipe = () => {
     fetchData();
   }, [fetchData]);
 
-  const toParagraph = (string) => string?.replace(/<[^>]+>/g, "");
+  // const toParagraph = (string) => string?.replace(/<[^>]+>/g, ""); // without applying html rules
+  
+  const sanitizer = DOMPurify.sanitize; // without it; potential XSS attack could happened
+  const toParagraph = (string) => <div dangerouslySetInnerHTML={{__html: sanitizer(string)}}/>
 
   return (
     <>

@@ -3,6 +3,7 @@
         "Contentful",
         "TTFB",
         "browserslist",
+        "dompurify",
         "movebtn"
     ]
 }

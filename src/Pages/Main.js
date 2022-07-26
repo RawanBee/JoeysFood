@@ -9,8 +9,16 @@ import {
   RecipesList,
 } from "../Components";
 import { useNavigate } from "react-router-dom";
-import _ from "lodash";
+import { debounce } from "lodash";
 import "./Main.css";
+
+/*
+Lodash is very useful when I handle nested array or objects. 
+By using functions supported by Lodash, you can chain the Lodash 
+functions so you can perform complicated array or objects 
+manipulations easily. This can lead your code to have more modularity 
+with less code when you need to deal with a complex data structure.
+*/
 
 const Main = () => {
   const [query, setQuery] = useState("");
@@ -37,7 +45,7 @@ const Main = () => {
 
   const debouncedOnChange = useMemo(
     () =>
-      _.debounce(async (q) => {
+      debounce(async (q) => {
         const data = await searchRecipes(q);
         setResults(data);
       }, 500),
