@@ -21,7 +21,6 @@ push or replace methods. It helps to go to the specific URL, forward or backward
         onClick={clickHandler}
         loading="lazy"
       />
-      <hr />
     </header>
   );
 };

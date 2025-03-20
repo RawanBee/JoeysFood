@@ -1,13 +1,13 @@
 .searchBarContainer {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 50vw;
   margin: 1vh 10vw;
 }
 
 .searchBarContainer input {
-  border: 2px solid #e0e0e0;
-  border-radius: 5px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
   color: #4d7a82;
   font-weight: bold;
   outline-width: 0;
@@ -15,14 +15,14 @@
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #d1d1d1;
+    color: gray;
     opacity: 1; /* Firefox */
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #d1d1d1;
+    color: gray;
   }
   
   ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #d1d1d1;
+    color: gray;
   }
