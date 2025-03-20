@@ -30,4 +30,5 @@
   color: black;
   font-size: calc(0.8rem + 0.8vw);
   margin: 0.5rem;
+  min-height: 100vh;
 }
